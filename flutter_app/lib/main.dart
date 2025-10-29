@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
@@ -32,7 +31,7 @@ class PDFMergePage extends StatefulWidget {
 class _PDFMergePageState extends State<PDFMergePage> {
   List<PlatformFile> selectedFiles = [];
   bool isMerging = false;
-  final String apiUrl = "http://127.0.0.1:5000/merge_pdfs"; // Local backend
+  final String apiUrl = "http://127.0.0.1:5000"; // Local backend
 
   Future<void> pickFiles() async {
     final result = await FilePicker.platform.pickFiles(
