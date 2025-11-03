@@ -1,0 +1,38 @@
+# Flutter / Dart
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+*.flutter-plugins
+*.iml
+.dart_tool/
+.ios/
+.android/
+web/.dart_tool/
+web/.idea/
+web/build/
+
+# VSCode / IDEs
+.vscode/
+.idea/
+
+# Python / Flask
+__pycache__/
+*.pyc
+instance/
+.env
+.venv/
+env/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if using any frontend tools later)
+node_modules/
+
+# Docker
+*.pid
+docker-compose.override.yml

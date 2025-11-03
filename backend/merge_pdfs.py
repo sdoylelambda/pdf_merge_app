@@ -1,8 +1,15 @@
 from PyPDF2 import PdfMerger
+import io
 
-def merge_pdfs(input_paths, output_path):
+def merge_pdfs(input_paths, output):
     merger = PdfMerger()
-    for pdf in input_paths:
-        merger.append(pdf)
-    merger.write(output_path)
+    for path in input_paths:
+        merger.append(path)
+
+    if isinstance(output, (io.BytesIO, io.BufferedIOBase)):
+        merger.write(output)
+    else:
+        with open(output, "wb") as f:
+            merger.write(f)
+
     merger.close()
